@@ -68,6 +68,7 @@ echo "# RSS in kB every $INTERVAL seconds of '$TARGET'" > $LOG
 if [ x"$PID" = "x" ]; then
   $@ &
   PID=$!
+  trap "kill -9 $PID" HUP INT QUIT TERM
 fi
 
 while is_alive $PID; do
