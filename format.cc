@@ -87,8 +87,8 @@ int main(int argc, char **argv) {
       assert(1.0 >= progress);
       double bin = profiles[j_file].size() * progress;
       double progress_in_bin = bin - floor(bin);
-      int bin_lower = floor(bin);
-      int bin_upper = ceil(bin);
+      unsigned bin_lower = floor(bin);
+      unsigned bin_upper = ceil(bin);
       if (bin_upper >= profiles[j_file].size())
         bin_upper = bin_lower;
       double val_lower = profiles[j_file][bin_lower];
