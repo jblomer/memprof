@@ -68,7 +68,7 @@ int main(int argc, char **argv) {
       max_entries = profiles[i].size();
   }
 
-  printf("set term dumb size 160,50 aspect 1\n");
+  printf("set term dumb size 160,50\n");
   printf("set xlabel \"Time\"\n");
   printf("set ylabel \"RSS [kB]\"\n");
   printf("plot '-' ");
